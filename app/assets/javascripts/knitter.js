@@ -143,13 +143,13 @@ var Knitter = {
     } else if (layer == 'yahoo') {
       var yahoosat = new OpenLayers.Layer.Yahoo("Yahoo Satellite", {type: YAHOO_MAP_SAT, sphericalMercator: true, numZoomLevels: 23});
       map.addLayer(yahoosat)
-// you can try
-// http://hypercube.telascience.org/tilecache/tilecache.py/1.0.0/NAIP_ALL/
+/*you can try
+ http://hypercube.telascience.org/tilecache/tilecache.py/1.0.0/NAIP_ALL/
 
-// but you might get better performance from newworld which switches
-// between bmng/landsat/naip based on zoom level
+ but you might get better performance from newworld which switches
+between bmng/landsat/naip based on zoom level
 
-// http://hypercube.telascience.org/tilecache/tilecache.py/1.0.0/NewWorld_google
+http://hypercube.telascience.org/tilecache/tilecache.py/1.0.0/NewWorld_google */
     } else if (layer == 'TMS') {
       Config.tile_url = tile_url || Config.tile_url
              var tms = new OpenLayers.Layer.TMS( "OpenLayers TMS", Config.tile_url,
